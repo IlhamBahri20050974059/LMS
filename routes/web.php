@@ -58,14 +58,25 @@ Route::get('/download/tahap5/{userId}', [App\Http\Controllers\PjblController::cl
 Route::get('/profil-siswa', [App\Http\Controllers\ProfilSiswaController::class, 'show'])->name('siswa.profil');
 Route::post('/profil-siswa-update', [App\Http\Controllers\ProfilSiswaController::class, 'update'])->name('siswa.profil.update');
 
-Route::get('/guru/pjbl', [App\Http\Controllers\Guru\PjblController::class, 'index'])->name('pjbl');
-Route::get('/guru/tahap1', [App\Http\Controllers\Guru\PjblController::class, 'tahap1'])->name('tahap1');
-Route::get('/guru/tahap2', [App\Http\Controllers\Guru\PjblController::class, 'tahap2'])->name('tahap2');
-Route::get('/guru/tahap3', [App\Http\Controllers\Guru\PjblController::class, 'tahap3'])->name('tahap3');
-Route::get('/guru/tahap4', [App\Http\Controllers\Guru\PjblController::class, 'tahap4'])->name('tahap4');
-Route::get('/guru/tahap5', [App\Http\Controllers\Guru\PjblController::class, 'tahap5'])->name('tahap5');
+Route::get('/guru/pjbl', [App\Http\Controllers\Guru\PjblController::class, 'pjbl'])->name('pjbl.guru');
+Route::get('/guru/tahap1', [App\Http\Controllers\Guru\PjblController::class, 'tahap1guru'])->name('tahap1.guru');
+Route::get('/guru/tahap2', [App\Http\Controllers\Guru\PjblController::class, 'tahap2guru'])->name('tahap2.guru');
+Route::get('/guru/tahap3', [App\Http\Controllers\Guru\PjblController::class, 'tahap3guru'])->name('tahap3.guru');
+Route::get('/guru/tahap4', [App\Http\Controllers\Guru\PjblController::class, 'tahap4guru'])->name('tahap4.guru');
+Route::get('/guru/tahap5', [App\Http\Controllers\Guru\PjblController::class, 'tahap5guru'])->name('tahap5.guru');
+Route::get('/guru/tahap6', [App\Http\Controllers\Guru\PjblController::class, 'tahap6guru'])->name('tahap6.guru');
+
 Route::get('/guru/tahap1/{id_siswa}', [App\Http\Controllers\Guru\PjblController::class, 'tahap1form'])->name('tahap1.form');
-Route::post('/guru/submit-tahap1', [App\Http\Controllers\Guru\PjblController::class, 'submittahap1'])->name('submit.tahap1');
-Route::get('/guru/tahap6', [App\Http\Controllers\Guru\PjblController::class, 'tahap6'])->name('tahap6');
+Route::post('/guru/submit-tahap1', [App\Http\Controllers\Guru\PjblController::class, 'submittahap1guru'])->name('submit.tahap1.guru');
+Route::get('/guru/tahap2/{id_kelompok}', [App\Http\Controllers\Guru\PjblController::class, 'tahap2form'])->name('tahap2.form');
+Route::post('/guru/submit-tahap2', [App\Http\Controllers\Guru\PjblController::class, 'submittahap2guru'])->name('submit.tahap2.guru');
+Route::get('/guru/tahap3/{id_kelompok}', [App\Http\Controllers\Guru\PjblController::class, 'tahap3form'])->name('tahap3.form');
+Route::post('/guru/submit-tahap3', [App\Http\Controllers\Guru\PjblController::class, 'submittahap3guru'])->name('submit.tahap3.guru');
+Route::get('/guru/tahap4/{id_siswa}', [App\Http\Controllers\Guru\PjblController::class, 'tahap4form'])->name('tahap4.form');
+Route::post('/guru/submit-tahap4', [App\Http\Controllers\Guru\PjblController::class, 'submittahap4guru'])->name('submit.tahap4.guru');
+Route::get('/guru/tahap5/{id_kelompok}', [App\Http\Controllers\Guru\PjblController::class, 'tahap5form'])->name('tahap5.form');
+Route::post('/guru/submit-tahap5', [App\Http\Controllers\Guru\PjblController::class, 'submittahap5guru'])->name('submit.tahap5.guru');
 Route::get('/guru/tahap6/{id_siswa}', [App\Http\Controllers\Guru\PjblController::class, 'tahap6form'])->name('tahap6.form');
-Route::post('/guru/submit-tahap6', [App\Http\Controllers\Guru\PjblController::class, 'submittahap6'])->name('submit.tahap6');
+Route::post('/guru/submit-tahap6', [App\Http\Controllers\Guru\PjblController::class, 'submittahap6guru'])->name('submit.tahap6.guru');
+Route::get('/guru/download/tahap3/{id_kelompok}', [App\Http\Controllers\Guru\PjblController::class, 'downloadTahap3'])->name('guru.download.tahap3');
+Route::get('/guru/download/tahap5/{id_kelompok}', [App\Http\Controllers\Guru\PjblController::class, 'downloadTahap5'])->name('guru.download.tahap5');
