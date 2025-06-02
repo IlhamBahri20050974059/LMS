@@ -1,10 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+<h1 class="mt-4">Tahap 1</h1>
    <form action="{{ route('submit.tahap1') }}" method="POST">
     @csrf
-    <input type="hidden" name="user_id" value="{{ Auth::id() }}">
-    
     <!-- Pertanyaan 1 -->
     <p>berikan pertanyaan dasar tentang Pemrograman dengan C++!</p>
     <label>

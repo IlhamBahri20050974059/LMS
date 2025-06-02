@@ -1,10 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
+<h1 class="mt-4">Tahap 6</h1>
+
    <form action="{{ route('submit.tahap6') }}" method="POST">
     @csrf
     <input type="hidden" name="user_id" value="{{ Auth::id() }}">
-    
+
     <!-- Pertanyaan 1 -->
     <p>Berikan umpan balik pembelajaran!!</p>
     <label>
